@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GANESH WORLD</title>
+    <style>
+        /* CSS for the background image */
+        body {
+            background-image: url('https://i.imgur.com/gLihbIh.jpeg'); /* Replace with your background image URL */
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: graphik, sans-serif;
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Ensure full viewport height */
+        }
+
+        img {
+            border: 10px solid rgba(185, 43, 43, 0.6);
+            max-width: 100%; /* Ensure the image doesn't exceed its container */
+            height: auto; /* Maintain the image's aspect ratio */
+        }
+
+        /* CSS for the content area */
+        .content {
+            position: relative;
+            padding: 0.4px;
+            background-color: rgba(185, 43, 43, 0); /* Semi-transparent white background for readability */
+            margin: 20px;
+            border-radius: 10px;
+            text-align: right; /* Align content to the right */
+        }
+
+        /* CSS for the navigation links */
+        .nav-links {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .nav-links a {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 50px;
+            text-decoration: none;
+            color: white; /* Change font color to white */
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #ccc; /* Change hover color to a lighter shade */
+        }
+
+        /* CSS for the spinning text */
+        #rotatingText {
+            animation-name: rotate-circle;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            position: relative;
+            top: -375px; /* Move the spinning text lower */
+            left: -420px; /* Move the spinning text to the right */
+        }
+
+        @keyframes rotate-circle {
+            from {
+                transform: rotate(0turn);
+            }
+            to {
+                transform: rotate(1turn);
+            }
+        }
+
+        #rotatingText .text {
+            fill: white; /* Change the fill color to white */
+        }
+
+        /* Container for the centered image */
+        .image-container {
+            text-align: center;
+            position: relative;
+            top: -200px; /* Move the image up a bit */
+            right: -150px;
+        }
+
+        /* Container for the spinning text */
+        .text-container {
+            text-align: left;
+            margin-left: 20px; /* Adjust the distance between image and text */
+        }
+
+        /* Container for Spotify Track */
+        .spotify-container {
+            text-align: center;
+            margin-top: -400px; /* Add margin to separate it from the image */
+            margin-right: 500px;
+        }
+
+        .spotify-container img {
+            max-width: 100%; /* Ensure the image doesn't exceed its container */
+            height: auto; /* Maintain the image's aspect ratio */
+            border: 7px solid rgba(29, 185, 84, 0.6);
+        }
+
+        .spotify-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-links">
+        <a href="https://www.google.com">🏡</a>
+        <a href="#">🤠</a>
+        <a href="#">⚙️</a>
+        <a href="#">🎨</a>
+        <a href="#">📈</a>
+    </div>
+    <div class="content">
+        <div class="image-container">
+            <img src="https://ca.slack-edge.com/T02E33PTM-U049E0J47B4-e655873b8a1c-512" alt="Centered Image">
+        </div>
+    </div>
+    <div class="text-container">
+        <div id="rotatingText">
+            <svg viewBox="0 0 200 200" width="200" height="200">
+                <defs>
+                    <path id="circle" d="M 100, 100
+                    m -75, 0
+                    a 75, 75 0 1, 0 150, 0
+                    a 75, 75 0 1, 0 -150, 0
+                    ">
+                    </path>
+                </defs>
+                <text width="400">
+                    <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+                        welcome to the good vibes of GANESH WORLD  ©️2023  💫 💛
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+    </div>
+
+    <div class="spotify-container">
+        <div class="spotify-title">What I'm listening to right now</div>
+        <img src="https://now-play.vercel.app/api/generate?uid=5bd0318b-ec55-4b33-952c-b726d80f1aad&theme=dark">
+    </div>
+</body>
+</html>
