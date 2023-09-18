@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT ME</title>
     <style>
-        /* CSS for the background image */
-        body {
-            background-image: url('https://i.imgur.com/gLihbIh.jpeg'); /* Replace with your background image URL */
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        /* Reset default styles for better mobile experience */
+        * {
             margin: 0;
             padding: 0;
-            font-family: graphik, sans-serif;
-            display: flex;
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            height: 100vh; /* Ensure full viewport height */
+            box-sizing: border-box;
         }
 
-        /* CSS for the navigation links */
+        /* CSS for the background image */
+        body {
+            background-image: url('https://i.imgur.com/gLihbIh.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style for the navigation links */
         .nav-links {
             position: absolute;
             top: 20px;
@@ -29,28 +36,26 @@
 
         .nav-links a {
             display: block;
-            margin-bottom: 10px;
-            font-size: 50px;
+            font-size: 30px;
             text-decoration: none;
-            color: white; /* Change font color to white */
+            color: white;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
         .nav-links a:hover {
-            color: #ccc; /* Change hover color to a lighter shade */
+            color: #ccc;
         }
-
 
         /* Container for Spotify Track */
         .spotify-container {
             text-align: center;
-            margin-top: -500px; /* Add margin to separate it from the image */
-            margin-right: 500px;
+            margin-top: 10px; /* Adjust margin-top to move Spotify container up */
         }
 
         .spotify-container img {
-            max-width: 100%; /* Ensure the image doesn't exceed its container */
-            height: auto; /* Maintain the image's aspect ratio */
+            max-width: 100%;
+            height: auto;
             border: 7px solid rgba(29, 185, 84, 0.6);
         }
 
@@ -60,25 +65,17 @@
             color: white;
             margin-top: 10px;
         }
-
-        .spotify-end {
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            margin-top: 10px;
-        }
     </style>
 </head>
 
 <body>
     <div class="nav-links">
-        <a href="https://gkolli.github.io/ganeshworld/index.html">🏡</a>
-        <a href="https://gkolli.github.io/ganeshworld/about.html">🤠</a>
+        <a href="https://github.com/gkolli/ganeshworld/blob/main/index.html">🏡</a>
+        <a href=".">🤠</a>
     </div>
     <div class="spotify-container">
-        <div class="spotify-title">what I'm listening to right now</div>
-        <img src="https://now-play.vercel.app/api/generate?uid=5bd0318b-ec55-4b33-952c-b726d80f1aad&theme=dark">
-        <div class="spotify-end">refresh the page for current track</div>
+        <div class="spotify-title">What I'm listening to right now</div>
+        <img src="https://now-play.vercel.app/api/generate?uid=5bd0318b-ec55-4b33-952c-b726d80f1aad&theme=dark" alt="Spotify Track">
     </div>
 </body>
 </html>
