@@ -5,57 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GANESH WORLD</title>
     <style>
-        /* CSS for the background image */
-        body {
-            background-image: url('https://i.imgur.com/gLihbIh.jpeg'); /* Replace with your background image URL */
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        /* Reset some default styles for better mobile experience */
+        * {
             margin: 0;
             padding: 0;
-            font-family: graphik, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* CSS for the background image */
+        body {
+            background-image: url('https://i.imgur.com/gLihbIh.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for the entire content */
+        .container {
             display: flex;
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            height: 100vh; /* Ensure full viewport height */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+            color: white;
         }
 
-        img {
-            border: 10px solid rgba(185, 43, 43, 0.6);
-            max-width: 100%; /* Ensure the image doesn't exceed its container */
-            height: auto; /* Maintain the image's aspect ratio */
+        /* Style for the header/navigation */
+        .header {
+            margin-bottom: 20px;
         }
 
-        /* CSS for the content area */
-        .content {
-            position: absolute;
-            padding: 0.4px;
-            background-color: rgba(185, 43, 43, 0); /* Semi-transparent white background for readability */
-            margin: 20px;
-            border-radius: 10px;
-            text-align: right; /* Align content to the right */
-            top: 110px; /* Adjust the top position to place it below nav-links */
-            left: -400px; /* Adjust the left position to place it to the right of nav-links */
-        }
-
-        /* CSS for the navigation links */
-        .nav-links {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-
-        .nav-links a {
-            display: block;
-            margin-bottom: 10px;
+        .header a {
             font-size: 50px;
             text-decoration: none;
-            color: white; /* Change font color to white */
-            font-weight: bold;
+            color: white;
+            margin-right: 20px;
         }
 
-        .nav-links a:hover {
-            color: #ccc; /* Change hover color to a lighter shade */
+        /* Style for the main content */
+        .content {
+            background-color: rgba(185, 43, 43, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            border: 10px solid rgba(29, 185, 84, 0.6);
         }
 
         /* CSS for the spinning text */
@@ -64,9 +63,7 @@
             animation-duration: 10s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
-            position: absolute;
-            top: 10px; /* Adjust the top position to place it at the top of the image */
-            left: 10px; /* Adjust the left position to place it at the left of the image */
+            margin-top: 10px;
         }
 
         @keyframes rotate-circle {
@@ -79,35 +76,26 @@
         }
 
         #rotatingText .text {
-            fill: white; /* Change the fill color to white */
+            fill: white;
         }
 
-        /* Container for the centered image */
-        .image-container {
-            text-align: center;
-            position: relative;
-            top: -100px; /* Move the image up */
-            right: -500px; /* Move the image to the right */
-            max-width: 100%;
-            height: auto;
+        /* Style for the 🤠 link */
+        .cowboy-hat {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            text-decoration: none;
         }
-
-        /* Container for the spinning text */
-        .text-container {
-            text-align: left;
-            margin-left: 20px; /* Adjust the distance between image and text */
-        }
-
     </style>
 </head>
 
 <body>
-    <div class="nav-links">
-        <a href=".">🏡</a>
-        <a href="https://gkolli.github.io/ganeshworld/about.html">🤠</a>
-    </div>
-    <div class="content">
-        <div class="image-container">
+    <div class="container">
+        <div class="header">
+        </div>
+        <div class="content">
             <img src="https://ca.slack-edge.com/T02E33PTM-U049E0J47B4-e655873b8a1c-512" alt="Centered Image">
             <div id="rotatingText">
                 <svg viewBox="0 0 200 200" width="175" height="175">
@@ -120,14 +108,14 @@
                         </path>
                     </defs>
                     <text width="400">
-                        <textPath alignment-baseline="top" xlink:href="#circle" class="text">
+                        <textPath alignment-baseline="middle" xlink:href="#circle" class="text">
                             welcome to the good vibes of GANESH WORLD  ©️2023  💫 💛
                         </textPath>
                     </text>
                 </svg>
+                <a href="https://github.com/gkolli/ganeshworld/blob/main/about.html" class="cowboy-hat">🤠</a>
             </div>
         </div>
     </div>
-
 </body>
 </html>
